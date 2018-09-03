@@ -71,4 +71,4 @@ if __name__ == '__main__':
 
     events = client.find_events()
     for e in events:
-        print('%s' % e['message'])
+        print('[%s] %s' % (datetime.fromtimestamp(e['timestamp'] / 1000.0).strftime('%Y-%m-%d %H:%M:%S.%f'), e['message']))
