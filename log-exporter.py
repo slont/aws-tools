@@ -72,5 +72,5 @@ if __name__ == '__main__':
     events = client.find_events()
     events = sorted(events, key=lambda e: e['timestamp'])
     for e in events:
-        print('[%s] %s' % (
+        print('%s, %s' % (
             datetime.fromtimestamp(e['timestamp'] / 1000.0).strftime('%Y-%m-%d %H:%M:%S.%f'), e['message']))
